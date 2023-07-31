@@ -1,0 +1,187 @@
+@import 'breakpoints';
+
+@mixin xsm {
+    @media (min-width: #{$screen-xsm-min}) {
+        @content;
+    }
+}
+
+@mixin xsm-down {
+    @media (max-width: #{$screen-xsm-min}) {
+        @content;
+    }
+}
+
+@mixin msm-down {
+    @media (max-width: #{$screen-msm-min}) {
+        @content;
+    }
+}
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Sub medium devices
+@mixin smd {
+    @media (min-width: #{$screen-smd-min}) {
+        @content;
+    }
+}
+
+@mixin smd-down {
+    @media (max-width: #{$screen-smd-min}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @media (max-width: #{$screen-lg-min - 1}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin xl-down {
+    @media (max-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: #{$screen-xxl-min}) {
+        @content;
+    }
+}
+
+@mixin xxl-down {
+    @media (max-width: #{$screen-xxl-min}) {
+        @content;
+    }
+}
+
+@mixin xxxl {
+    @media (min-width: #{$screen-xxxl-min}) {
+        @content;
+    }
+}
+
+@mixin xxxl-down {
+    @media (max-width: #{$screen-xxxl-min}) {
+        @content;
+    }
+}
+
+@mixin xxxxl {
+    @media (min-width: #{$screen-4xl-min}) {
+        @content;
+    }
+}
+
+@mixin xxxl-down {
+    @media (max-width: #{$screen-4xl-min}) {
+        @content;
+    }
+}
+
+@mixin fhd-desktop-up {
+    @media (min-width: #{$screen-fhd-min}) {
+        @content;
+    }
+}
+
+@mixin text-title {
+    font-size: 45px;
+    line-height: calc(60 / 45);
+}
+
+@mixin text-body {
+    font-size: 1rem;
+    line-height: 1.4;
+
+    @include xxxxl {
+        font-size: 1.1rem;
+    }
+}
+
+@mixin text-body-title {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+@mixin text-body-highlight {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+@mixin text-mini {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+@mixin text-head-1 {
+    font-size: 75px;
+    line-height: 1.1;
+    font-weight: 700;
+
+    @include xxl-down {
+        font-size: 3.75rem;
+    }
+
+    @include sm-down {
+        font-size: 48px;
+    }
+}
+
+@mixin text-head-2 {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+@mixin text-outstanding {
+    font-size: 90px;
+    // line-height: ;
+    font-weight: 600;
+}
+
+@mixin text-body-highlight-lower {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+}
