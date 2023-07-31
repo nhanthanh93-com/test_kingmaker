@@ -1,8 +1,9 @@
-import styles from './page.module.scss'
+"use client";
+import { useEffect } from "react";
+import styles from "./page.module.scss";
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      Home Page
-    </main>
-  )
+  useEffect(() => {
+    console.log("in useEffect");
+  }, []);
+  return <main className={styles.main}>Home Page</main>;
 }
