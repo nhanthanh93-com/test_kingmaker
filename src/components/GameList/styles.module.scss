@@ -1,0 +1,52 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.game-list {
+  position: absolute;
+  width: calc(100% - 100px);
+  gap: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  @include md-down {
+    margin-top: calc((70px * 2));
+    width: calc(100% - 30px);
+    position: relative;
+    top: unset;
+    transform: unset;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &--item {
+    position: relative;
+
+    img {
+      height: auto;
+      width: auto;
+    }
+    .favorite {
+      background-image: url("/assets/NewAsset/icon_heart_disable.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      height: 53px;
+      width: 59px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include lg-down {
+        height: 23px;
+        width: 29px;
+      }
+      &.active {
+        background-image: url("/assets/NewAsset/icon_heart_active.png");
+      }
+    }
+  }
+}
+
+.swiper {
+  overflow: initial;
+}

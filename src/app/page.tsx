@@ -1,9 +1,13 @@
 "use client";
-import { useEffect } from "react";
+import React from "react";
 import styles from "./page.module.scss";
+import GameList from "@/components/GameList";
 export default function Home() {
-  useEffect(() => {
-    console.log("in useEffect");
-  }, []);
-  return <main className={styles.main}>Home Page</main>;
+  return (
+    <React.Fragment>
+      <main className={styles["main"]}>
+        <GameList />
+      </main>
+    </React.Fragment>
+  );
 }

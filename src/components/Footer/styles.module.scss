@@ -1,0 +1,288 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.footer {
+  color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  background-image: url("/assets/footer/nav_bot_panel_bg.png");
+  height: 245px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @include xxxl-down {
+    height: 200px;
+  }
+  @include xxl-down {
+    height: 180px;
+  }
+  @include xl-down {
+    height: 160px;
+  }
+
+  @include lg-down {
+    height: 90px;
+  }
+  @include md-down {
+    height: 160px;
+  }
+  @include xsm-down {
+    height: 130px;
+  }
+  .daily-rewards {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 380px;
+    height: 210px;
+    z-index: 2;
+    transform: scale(1) translateX(-50%);
+
+    @include xxxl-down {
+      transform: scale(0.9) translateX(-55%);
+      bottom: -20px;
+    }
+    @include xxl-down {
+      transform: scale(0.8) translateX(-60%);
+      bottom: -30px;
+    }
+    @include xl-down {
+      transform: scale(0.7) translateX(-75%);
+      bottom: -40px;
+    }
+    @include lg-down {
+      transform: scale(0.45) translate(-110%, 70%);
+      bottom: 0;
+    }
+    @include md-down {
+      transform: scale(0.5) translateX(-100%);
+      bottom: 20px;
+    }
+    @include xsm-down {
+      transform: scale(0.4) translateX(-130%);
+      bottom: 10px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .front {
+      position: absolute;
+      background-image: url("/assets/footer/d_front.png");
+      width: 389px;
+      height: 126px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .back {
+      position: absolute;
+      background-image: url("/assets/footer/d_back.png");
+      width: 233px;
+      height: 130px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gem {
+      position: absolute;
+      background-image: url("/assets/footer/d_gem.png");
+      width: 368px;
+      height: 121px;
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .notice {
+      position: absolute;
+      top: 10px;
+      right: 80px;
+    }
+  }
+
+  .footer-items {
+    position: absolute;
+    max-width: 1710px;
+    width: 100%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    display: flex;
+    gap: 90px;
+
+    @include xxxl-down {
+      padding: 0 24px;
+      gap: 90px;
+    }
+    @include xxl-down {
+      padding: 0 24px;
+      gap: 80px;
+    }
+    @include xl-down {
+      padding: 0 24px;
+      gap: 40px;
+    }
+    @include lg-down {
+      gap: 40px;
+      top: 10px;
+      max-width: $screen-md-min;
+      padding: 0 12px 12px 0;
+    }
+    @include md-down {
+      max-width: fit-content;
+      top: unset;
+      bottom: 0;
+      gap: 10px;
+      padding: 0 8px 8px 0;
+    }
+    @include xsm-down {
+      gap: 5px;
+      padding: 0 8px 8px 0;
+    }
+    &--item {
+      position: relative;
+      display: block;
+      width: 145px;
+
+      @include xxxl-down {
+        width: 120px;
+      }
+      @include xxl-down {
+        width: 100px;
+      }
+      @include xl-down {
+        width: 100px;
+      }
+      @include lg-down {
+        width: 64px;
+      }
+      @include md-down {
+        width: 80px;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      &:first-child {
+        .img {
+          background-image: url("/assets/footer/icon_shop.png");
+        }
+      }
+      &:nth-child(2) {
+        .img {
+          background-image: url("/assets/footer/icon_flag.png");
+        }
+      }
+      &:nth-child(3) {
+        .img {
+          background-image: url("/assets/footer/icon_controller.png");
+        }
+      }
+      &:nth-child(4) {
+        margin-left: auto;
+        @include md-down {
+          margin: 0;
+        }
+        .img {
+          background-image: url("/assets/footer/icon_update.png");
+        }
+      }
+      &:nth-child(5) {
+        .img {
+          background-image: url("/assets/footer/icon_mail.png");
+        }
+      }
+      &:last-child {
+        .img {
+          background-image: url("/assets/footer/icon_ranking_soon.png");
+        }
+      }
+      .img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        @include xxxl-down {
+          width: 120px;
+          height: 120px;
+        }
+        @include xxl-down {
+          width: 110px;
+          height: 110px;
+        }
+        @include xl-down {
+          width: 100px;
+          height: 100px;
+        }
+        @include lg-down {
+          width: 64px;
+          height: 64px;
+        }
+        @include md-down {
+          width: 50px;
+          height: 50px;
+        }
+        @include xsm-down {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .text {
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        span {
+          font-size: 20px;
+        }
+        @include lg-down {
+          margin-top: -4px;
+          span {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+        @include md-down {
+          margin-top: 2px;
+          span {
+            font-size: 10px;
+            font-weight: 700;
+          }
+        }
+        @include xsm-down {
+          margin-top: 2px;
+          span {
+            font-size: 8px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.notice {
+  background-image: url("/assets/NewAsset/notice_dot.png");
+  width: 50px;
+  height: 54px;
+}

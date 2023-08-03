@@ -1,3 +1,24 @@
-@import 'variables';
-@import 'mixins';
-@import 'reset';
+@import "variables";
+@import "mixins";
+@import "reset";
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("/assets/NewAsset/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  @include xxxl {
+    height: 100vh;
+  }
+  @include xxxl-down {
+    height: 100vh;
+  }
+  @include md-down {
+    height: unset;
+    margin-bottom: 300px;
+  }
+}

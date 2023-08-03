@@ -1,9 +1,31 @@
+@import "_mixins.scss";
+@import "_variables.scss";
 .main {
+  margin-top: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
   color: white;
+  @include xxxxl {
+    margin-top: 160px;
+  }
+  @include xxxxl-down {
+    margin-top: 160px;
+  }
+  @include xxxl-down {
+    margin-top: 128px;
+  }
+  @include xxl-down {
+    margin-top: 128px;
+  }
+  @include xl-down {
+    margin-top: 108px;
+  }
+  @include lg-down {
+    margin-top: 68px;
+  }
+  @include md-down {
+    margin-top: 70px;
+  }
 }

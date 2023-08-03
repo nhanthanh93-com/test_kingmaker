@@ -1,0 +1,83 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$size: 32px;
+.navbar {
+  position: fixed;
+  display: flex;
+  gap: 12px;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  top: calc(160px + 20px);
+  @include xxxl-down {
+    top: calc(128px + 20px);
+  }
+  @include xxl-down {
+    top: calc(128px + 20px);
+  }
+  @include xl-down {
+    top: calc(128px + 20px);
+  }
+  @include lg-down {
+    top: calc(68px + 10px);
+  }
+  @include md-down {
+    top: calc(70px + 70px + 10px);
+  }
+  .area-left {
+    background-color: #000;
+    border-radius: 50px;
+    padding: 0 32px;
+    display: flex;
+    gap: 12px;
+    height: 64px;
+    align-items: center;
+    @include lg-down {
+      padding: 0 18px;
+      height: $size;
+    }
+    @include md-down {
+      padding: 0 18px;
+      height: $size;
+    }
+    img {
+      width: $size;
+      height: auto;
+      @include lg-down {
+        width: 24px;
+      }
+      @include md-down {
+        width: 24px;
+      }
+    }
+  }
+  .area-right {
+    background-color: #b98925;
+    border-radius: 50px;
+    height: 64px;
+    width: 64px;
+    display: grid;
+    align-items: center;
+    @include lg-down {
+      height: $size;
+      width: $size;
+    }
+    @include md-down {
+      height: $size;
+      width: $size;
+    }
+    img {
+      width: $size;
+      height: auto;
+      margin: 0 auto;
+      @include lg-down {
+        width: 24px;
+      }
+      @include md-down {
+        width: 24px;
+      }
+    }
+  }
+}
